@@ -8,8 +8,11 @@ fn main() {
     let arg : &String = args.iter().nth(1).expect("no filepath was specified");
     let lines = read_lines(arg);
     let games = lines.iter().map(|l| parse_game(l));
+    /* part 1
     let valid_games = games.filter(|g| validate_game(&g));
     let result : u32 = valid_games.map(|g| g.id).sum();
+    */
+    let result : u32 = games.map(|g| game_power(&g)).sum();
     println!("{}", result);
 }
 
@@ -78,4 +81,11 @@ fn parse_roll(roll : &String) -> (u32, u32, u32) {
 fn validate_game(game : &Game) -> bool {
     const PREDICATE : (u32, u32, u32) = (12, 13, 14);
     game.counts.iter().map(|count| count.0 <= PREDICATE.0 && count.1 <= PREDICATE.1 && count.2 <= PREDICATE.2).fold(true, |a, b| a && b)
+}
+
+fn game_power(game : &Game) -> u32 {
+    let red_max = game.counts.iter().map(|count| count.0).max().unwrap();
+    let green_max = game.counts.iter().map(|count| count.1).max().unwrap();
+    let blue_max = game.counts.iter().map(|count| count.2).max().unwrap();
+    red_max * green_max * blue_max
 }
