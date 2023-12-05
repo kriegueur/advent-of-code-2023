@@ -1,0 +1,323 @@
+warning: function `convert` is never used
+  --> src/main.rs:59:4
+   |
+59 | fn convert(values : &Vec<u64>, maps : &Vec<RangeMap>) -> Vec<u64> {
+   |    ^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: method `has` is never used
+  --> src/main.rs:96:8
+   |
+95 | impl RangeMap {
+   | ------------- method in this implementation
+96 |     fn has(&self, value : u64) -> bool {
+   |        ^^^
+
+warning: `day-5-seeds` (bin "day-5-seeds") generated 2 warnings
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/day-5-seeds input/test2`
+[src/main.rs:72] &work = [
+    (
+        79,
+        14,
+    ),
+]
+[src/main.rs:129] range = (
+    79,
+    14,
+)
+[src/main.rs:129] self.source = 79
+[src/main.rs:129] self.length = 14
+[src/main.rs:130] contained_start = 79
+[src/main.rs:130] contained_end = 92
+[src/main.rs:79] left = (
+    79,
+    0,
+)
+[src/main.rs:79] middle = (
+    79,
+    14,
+)
+[src/main.rs:79] right = (
+    93,
+    0,
+)
+[src/main.rs:83] converted = (
+    81,
+    14,
+)
+[src/main.rs:91] &result = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:91] &result = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:91] &result = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        81,
+        14,
+    ),
+]
+[src/main.rs:129] range = (
+    81,
+    14,
+)
+[src/main.rs:129] self.source = 25
+[src/main.rs:129] self.length = 70
+[src/main.rs:130] contained_start = 81
+[src/main.rs:130] contained_end = 94
+[src/main.rs:79] left = (
+    81,
+    0,
+)
+[src/main.rs:79] middle = (
+    81,
+    14,
+)
+[src/main.rs:79] right = (
+    95,
+    0,
+)
+[src/main.rs:83] converted = (
+    74,
+    14,
+)
+[src/main.rs:91] &result = [
+    (
+        74,
+        14,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        74,
+        14,
+    ),
+]
+[src/main.rs:129] range = (
+    74,
+    14,
+)
+[src/main.rs:129] self.source = 77
+[src/main.rs:129] self.length = 23
+[src/main.rs:130] contained_start = 77
+[src/main.rs:130] contained_end = 87
+[src/main.rs:79] left = (
+    74,
+    3,
+)
+[src/main.rs:79] middle = (
+    77,
+    11,
+)
+[src/main.rs:79] right = (
+    88,
+    0,
+)
+[src/main.rs:83] converted = (
+    45,
+    11,
+)
+[src/main.rs:72] &work = [
+    (
+        74,
+        3,
+    ),
+]
+[src/main.rs:129] range = (
+    74,
+    3,
+)
+[src/main.rs:129] self.source = 64
+[src/main.rs:129] self.length = 13
+[src/main.rs:130] contained_start = 74
+[src/main.rs:130] contained_end = 76
+[src/main.rs:79] left = (
+    74,
+    0,
+)
+[src/main.rs:79] middle = (
+    74,
+    3,
+)
+[src/main.rs:79] right = (
+    77,
+    0,
+)
+[src/main.rs:83] converted = (
+    78,
+    3,
+)
+[src/main.rs:91] &result = [
+    (
+        45,
+        11,
+    ),
+    (
+        78,
+        3,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        45,
+        11,
+    ),
+    (
+        78,
+        3,
+    ),
+]
+[src/main.rs:129] range = (
+    45,
+    11,
+)
+[src/main.rs:129] self.source = 0
+[src/main.rs:129] self.length = 69
+[src/main.rs:130] contained_start = 45
+[src/main.rs:130] contained_end = 55
+[src/main.rs:79] left = (
+    45,
+    0,
+)
+[src/main.rs:79] middle = (
+    45,
+    11,
+)
+[src/main.rs:79] right = (
+    56,
+    0,
+)
+[src/main.rs:83] converted = (
+    46,
+    11,
+)
+[src/main.rs:72] &work = [
+    (
+        78,
+        3,
+    ),
+]
+[src/main.rs:91] &result = [
+    (
+        46,
+        11,
+    ),
+    (
+        78,
+        3,
+    ),
+]
+[src/main.rs:72] &work = [
+    (
+        46,
+        11,
+    ),
+    (
+        78,
+        3,
+    ),
+]
+[src/main.rs:129] range = (
+    46,
+    11,
+)
+[src/main.rs:129] self.source = 56
+[src/main.rs:129] self.length = 37
+[src/main.rs:130] contained_start = 56
+[src/main.rs:130] contained_end = 56
+[src/main.rs:79] left = (
+    46,
+    10,
+)
+[src/main.rs:79] middle = (
+    56,
+    1,
+)
+[src/main.rs:79] right = (
+    57,
+    0,
+)
+[src/main.rs:83] converted = (
+    60,
+    1,
+)
+[src/main.rs:72] &work = [
+    (
+        78,
+        3,
+    ),
+    (
+        46,
+        10,
+    ),
+]
+[src/main.rs:129] range = (
+    78,
+    3,
+)
+[src/main.rs:129] self.source = 56
+[src/main.rs:129] self.length = 37
+[src/main.rs:130] contained_start = 78
+[src/main.rs:130] contained_end = 80
+[src/main.rs:79] left = (
+    78,
+    0,
+)
+[src/main.rs:79] middle = (
+    78,
+    3,
+)
+[src/main.rs:79] right = (
+    81,
+    0,
+)
+[src/main.rs:83] converted = (
+    82,
+    3,
+)
+[src/main.rs:72] &work = [
+    (
+        46,
+        10,
+    ),
+]
+[src/main.rs:91] &result = [
+    (
+        60,
+        1,
+    ),
+    (
+        82,
+        3,
+    ),
+    (
+        46,
+        10,
+    ),
+]
