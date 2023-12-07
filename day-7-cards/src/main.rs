@@ -42,6 +42,7 @@ fn line_to_hand(line: &str) -> Hand {
 
 const fn strength(c: char) -> u32 {
     match c {
+        'J' => 0,
         '2' => 1,
         '3' => 2,
         '4' => 3,
@@ -51,10 +52,9 @@ const fn strength(c: char) -> u32 {
         '8' => 7,
         '9' => 8,
         'T' => 9,
-        'J' => 10,
-        'Q' => 11,
-        'K' => 12,
-        'A' => 13,
+        'Q' => 10,
+        'K' => 11,
+        'A' => 12,
         _ => 0,
     }
 }
@@ -107,11 +107,15 @@ struct HandBuilder<'a> {
 impl<'a> HandBuilder<'a> {
     fn new(cards: &str) -> HandBuilder {
         let mut sorted_cards: HashMap<char, u32> = HashMap::new();
+        let mut jokers: u32 = 0;
         for card in cards.chars() {
-            *sorted_cards.entry(card).or_insert(0) += 1;
+            match card {
+                'J' => jokers += 1,
+                c => *sorted_cards.entry(c).or_insert(0) += 1,
+            }
         }
         let mut amounts = sorted_cards.values().sorted().rev();
-        let strength: u32 = match amounts.next().unwrap() {
+        let strength: u32 = match amounts.next().unwrap_or(&0) + jokers {
             5 => FIVE,
             4 => FOUR,
             3 => match amounts.next().unwrap() {
